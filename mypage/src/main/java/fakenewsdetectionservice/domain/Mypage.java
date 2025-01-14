@@ -17,7 +17,7 @@ public class Mypage {
     private String user;
 
     @Id
-    //@GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long newsId;
 
     private String commentContent;

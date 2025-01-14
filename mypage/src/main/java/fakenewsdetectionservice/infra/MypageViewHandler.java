@@ -28,7 +28,7 @@ public class MypageViewHandler {
             Mypage mypage = new Mypage();
             // view 객체에 이벤트의 Value 를 set 함
             mypage.setNewsTitle(newsUploaded.getNewsTitle());
-            mypage.setStatus(판독할 뉴스 등록);
+            mypage.setStatus("판독할 뉴스 등록");
             mypage.setNewsId(newsUploaded.getId());
             mypage.setUser(newsUploaded.getUser());
             // view 레파지 토리에 save
@@ -49,7 +49,7 @@ public class MypageViewHandler {
             // view 객체에 이벤트의 Value 를 set 함
             mypage.setNewsTitle(detectionSucceeded.getNewsTitle());
             mypage.setNewsId(detectionSucceeded.getNewsId());
-            mypage.setStatus(판독 완료);
+            mypage.setStatus("판독 완료");
             // view 레파지 토리에 save
             mypageRepository.save(mypage);
 
@@ -86,7 +86,7 @@ public class MypageViewHandler {
             // view 객체 생성
             Mypage mypage = new Mypage();
             // view 객체에 이벤트의 Value 를 set 함
-            mypage.setStatus(게시글이 등록되었습니다.);
+            mypage.setStatus("게시글이 등록되었습니다");
             mypage.setNewsTitle(boardRegistered.getNewsTitle());
             mypage.setBoardId(boardRegistered.getId());
             // view 레파지 토리에 save
@@ -105,7 +105,7 @@ public class MypageViewHandler {
             // view 객체 생성
             Mypage mypage = new Mypage();
             // view 객체에 이벤트의 Value 를 set 함
-            mypage.setStatus(좋아요가 올라갔습니다);
+            mypage.setStatus("좋아요가 올라갔습니다");
             mypage.setBoardId(likeSuggested.getId());
             mypage.setCommentLikeCount(likeSuggested.getLikeCount());
             // view 레파지 토리에 save
@@ -125,7 +125,7 @@ public class MypageViewHandler {
             Mypage mypage = new Mypage();
             // view 객체에 이벤트의 Value 를 set 함
             mypage.setCommentId(commentLikeSuggested.getId());
-            mypage.setStatus(댓글에 좋아요가 올라갔습니다);
+            mypage.setStatus("댓글에 좋아요가 올라갔습니다");
             mypage.setLikeCount(commentLikeSuggested.getLikeCount());
             // view 레파지 토리에 save
             mypageRepository.save(mypage);
@@ -146,7 +146,7 @@ public class MypageViewHandler {
                 for(Mypage mypage : mypageList){
                     // view 객체에 이벤트의 eventDirectValue 를 set 함
                     mypage.setCommentId(commentUpdated.getId());
-                    mypage.setStatus(댓글이 변경되었습니다.);
+                    mypage.setStatus("댓글이 변경되었습니다");
                 // view 레파지 토리에 save
                 mypageRepository.save(mypage);
                 }

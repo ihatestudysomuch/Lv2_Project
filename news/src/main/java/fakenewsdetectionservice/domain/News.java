@@ -54,7 +54,7 @@ public class News {
     public static void retry(DetetionFailed detetionFailed) {
         //implement business logic here:
 
-        /** Example 1:  new item 
+        /** Example 1:  new item
         News news = new News();
         repository().save(news);
 
@@ -62,18 +62,18 @@ public class News {
         newsUploaded.publishAfterCommit();
         */
 
-        /** Example 2:  finding and process
-        
-        repository().findById(detetionFailed.get???()).ifPresent(news->{
-            
-            news // do something
+//         Example 2:  finding and process
+
+        repository().findById(detetionFailed.getNewsId()).ifPresent(news->{
+
+            news.setStatus("뉴스를 다시 업로드 하세요."); // do something
             repository().save(news);
 
-            NewsUploaded newsUploaded = new NewsUploaded(news);
-            newsUploaded.publishAfterCommit();
+            RetryAccepted retryAccepted = new RetryAccepted();
+            retryAccepted.publishAfterCommit();
 
          });
-        */
+
 
     }
 
