@@ -29,6 +29,8 @@ cd /bin
 - comment
 - notify
 - mypage
+- blue sticker(Command): 동기 호출, frontend에서 button처럼 사용자의 상호작용으로 이후 Event 동작, Controller
+- liac sticker(Policy): 비동기 호출, 사용자의 상호작용이 아닌, Event를 받아 곧장 실행, PolicyHandler
 
 ## Run API Gateway (Spring Gateway), 필수 x
 ```
